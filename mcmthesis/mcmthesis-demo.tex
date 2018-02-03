@@ -1,0 +1,47 @@
+%1. 注释
+%"Ctrl" + "T"
+%2. 去除注释
+%“Ctrl” + "U"
+\documentclass{mcmthesis}
+\mcmsetup{CTeX = true,   % 使用 CTeX 套装时，设置为 true
+        tcn = 6666, problem = A,
+        sheet = true, titleinsheet = true, keywordsinsheet = true,
+        titlepage = false, abstract = false}
+\usepackage{palatino}
+\usepackage{caption} % 图片
+\usepackage{subfigure} % 图片
+\usepackage{lipsum} % 文本
+\usepackage{booktabs} % 表格
+\usepackage{makecell} % 表格线段的粗细
+\usepackage{cite}
+\usepackage[numbers,sort&compress]{natbib} % 引入多个参考文献
+\bibliographystyle{plain}
+\title{The \LaTeX{} Template for MCM Version \MCMversion}
+\author{\small \href{http://www.latexstudio.net/}
+  {\graphics[width=7cm]{mcmthesis-logo}}}
+\date{\today}
+
+\begin{document}
+% 摘要
+\input{paper/abstract}
+
+
+\maketitle  % 模板自带：添加
+\tableofcontents % 添加目录
+
+\newpage % 段页
+
+% 在子文件夹下编写文件
+\input{paper/Introduction}
+\input{paper/AnalysisofOverallandKeyPoints}
+\input{paper/AssumptionsAndJustification}
+\input{paper/SymbolsAndDefinitions}
+\input{paper/Models}
+%\input{paper/EvaluateOfTheMode}
+\input{paper/StrengthsAndWeaknesses}
+\input{paper/Conclusions}
+\input{paper/FutureImprovements}
+\input{paper/References}
+% 附录
+\include{paper/appendices}
+\end{document}
