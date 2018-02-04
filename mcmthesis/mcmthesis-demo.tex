@@ -6,7 +6,7 @@
 \mcmsetup{CTeX = true,   % 使用 CTeX 套装时，设置为 true
         tcn = 6666, problem = A,
         sheet = true, titleinsheet = true, keywordsinsheet = true,
-        titlepage = false, abstract = false}
+        titlepage = false, abstract = true}
 \usepackage{palatino}
 \usepackage{caption} % 图片
 \usepackage{subfigure} % 图片
@@ -16,7 +16,10 @@
 \usepackage{cite}
 \usepackage[numbers,sort&compress]{natbib} % 引入多个参考文献
 \bibliographystyle{plain}
-\title{The \LaTeX{} Template for MCM Version \MCMversion}
+\setlength{\parskip}{0.2em}
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+\title{Camping on the Grand River}
 \author{\small \href{http://www.latexstudio.net/}
   {\graphics[width=7cm]{mcmthesis-logo}}}
 \date{\today}
@@ -33,14 +36,15 @@
 
 % 在子文件夹下编写文件
 \input{paper/Introduction}
-\input{paper/AnalysisofOverallandKeyPoints}
+%\input{paper/AnalysisofOverallandKeyPoints}
 \input{paper/AssumptionsAndJustification}
 \input{paper/SymbolsAndDefinitions}
 \input{paper/Models}
-%\input{paper/EvaluateOfTheMode}
+\input{paper/EvaluateOfTheMode}
 \input{paper/StrengthsAndWeaknesses}
-\input{paper/Conclusions}
+%\input{paper/Conclusions}
 \input{paper/FutureImprovements}
+\input{paper/memorandum}
 \input{paper/References}
 % 附录
 \include{paper/appendices}

@@ -1,1 +1,74 @@
-\section{Evaluate of the Mode}
+\section{Sensitivity analysis of the model}
+\noindent
+Since a good mathematical model should have good sensitivity, we conduct a sensitivity analysis of the model we built. In this section, we will conduct a sensitivity analysis of the maximum daily drifting time, the number of campsites evenly distributed along the banks, the minimum number of collisions during the drifting season.
+\subsection{Sensitivity analysis of the maximum drifting time of a day}
+\noindent
+In the hypothetical part, we assume that the maximum daily drifting time for a tour group is 8h, whereas the different maximum daily drifting durations will change the maximum number of trips. We have substituted the maximum daily drifting durations 7h, 7.5h, 8.5h, and 9h into our model The results are as follows:	
+\begin{table}[htbp]
+	\centering
+	\caption{\label{tab:Symbols}The results}
+	\begin{tabular}{c|c c c c r}
+		\Xhline{1.2pt}
+		Daily maximum drifting time/h  & 7.0  & 7.5 & 8.0 & 8.5 & 9.0 \\
+		\midrule
+		Raiver carrying capacity/times & 842 & 874 & 918 & 931 & 948 \\
+		\Xhline{1.2pt} 
+	\end{tabular}
+\end{table}
+The rate of change of the carrying capacity of the river by the table:
+\begin{equation}
+\begin{array}{l}
+{\Delta _1}{\rm{ = }}\frac{{842 - 918}}{{918}} \times 100{\rm{\%  =  - }}8.2{\rm{\% }}\\
+\\
+{\Delta _2}{\rm{ = }}\frac{{948{\rm{ - }}918}}{{918}} \times 100{\rm{\%  = }}3.2{\rm{\% }}
+\end{array}\label{aa1}
+\end{equation}
+\par According to the result of sensitivity test, we find that the variation range of river carrying capacity does not exceed, proving that our model has better sensitivity.
+
+\subsection{Sensitivity analysis of the total campsite}
+\noindent
+Obviously, the carrying capacity of a river is positively related to the number of campsites. In order to study the relationship between the increasing trend of the maximum number of trips X during the drift season and the total number of campsites Y in our model, we ensure that the number of fleet contacts will not change , Change the number of campsites and observe the growth trend of the maximum number of trips, and then use function fitting to roughly determine the change of the maximum number of trips with the total campsite growth. Suppose the total number of campgrounds is 26, 30, 34, 38, 42, 46, 50 and enter the model to get the result as follows:\\
+
+\begin{table}[htbp]
+	\centering
+	\caption{\label{tab:Symbols}The results}
+	\scalebox{0.89}[0.85]{%
+	\begin{tabular}{cccccccc}
+		\Xhline{1.2pt}
+		Number of camps & 26 & 30 & 34 & 38 & 42 & 46 & 50 \\
+		\midrule
+		Raiver carrying capacity/times & 805 & 880 & 892 & 918 & 927 & 932 & 934 \\
+		\midrule
+		The rate & -8.54\% & -4.21\% & -2.78\% & 0\% & 1.06\% & 0.52\% & 0.21\% \\ 
+		\Xhline{1.2pt} 
+	\end{tabular}%
+	}
+\end{table}
+
+\par Where, the growth rate\\
+\begin{equation}
+\Delta {\rm{ = }}\left\{ {\begin{array}{*{20}{c}}
+	{\frac{{{Y_n} - {Y_{n + 1}}}}{{{Y_{n + 1}}}}}&{n < 38}\\
+	\\
+	{\frac{{{Y_{n + 1}} - {Y_n}}}{{{Y_n}}}}&{n > 38}
+	\end{array}} \right.\label{aa1}
+\end{equation}
+\par It is easy to find through analysis of R that X and Y are roughly in exponential relation with the increase of the total number of camping sites evenly distributed along the bank, the maximum number of trips in the drifting season will increase less and less and eventually may show a saturated trend.
+
+\subsection{Sensitivity analysis of contacts frequency}
+\noindent
+In the process of solving the model, we weaken the second optimal objective( the number of contect） into the constraint condition, next we change the minimum contact number M to ensure the total number of the camp, and observe the change of the maximum travel times of the drift season, that is, the river carrying capacity X. We will take M in the sequence of 8,10,12,14,16, and the result is as follows:
+\begin{table}[htbp]
+	\centering
+	\caption{\label{tab:Symbols}the sequence of 8,10,12,14,16, and the results}
+	\scalebox{0.89}{%
+		\begin{tabular}{c|ccccc}
+			\Xhline{1.2pt}
+			Number of contacts  & 8 & 10 & 12 & 14 & 16 \\
+			\midrule
+			river carrying capacity / Times & 907 & 918 & 928 & 937 & 942 \\
+			\Xhline{1.2pt} 
+		\end{tabular}%
+	}
+\end{table}
+\par Our analysis of the above table shows that the maximum number of trips increases when the number of contacts with the group is allowed to increase. Taking into account the number of campsites and the number of contacts on the maximum number of trips, it is not difficult to find that the two optimization objectives in this model are contradictory. Therefore, we should conduct an in-depth study on the relationship between the two. Unfortunately, due to time constraints, we failed to accomplish the task. If there is a chance later, we must make up for this great regret
