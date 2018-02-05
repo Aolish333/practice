@@ -19,3 +19,6 @@
 \contentsline {subsection}{\numberline {6.2}weaknesses}{13}{subsection.6.2}
 \contentsline {section}{\numberline {7}Future Improvements}{14}{section.7}
 \contentsline {section}{\numberline {8}memorandum}{15}{section.8}
+\contentsline {section}{Appendices}{17}{section*.10}
+\contentsline {section}{Appendix \numberline {A}First appendix}{17}{Appendix.a.A}
+\contentsline {section}{Appendix \numberline {B}Second appendix}{18}{Appendix.a.B}
