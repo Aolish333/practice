@@ -14,7 +14,7 @@ We consider the travel time and travel methods, a total of 26 kinds of programs 
 We can calculate that for rafts and motorboats, the number of drifting days satisfies ${T_1} \ge 7{T_2} \ge 6$ ,respectively. Therefore, we will exclude the option of including oar-raft and six-day modes of transport, leaving 25 travel options, followed by ${p_1},{p_2},{p_3}...{p_{25}}$ , The specific content of the program is shown in Table \ref{tab:Symbols} \ref{tab:Symbol}.
 %The minimum number of drifting days for a dinghy can be calculated as 1, so the rubber dinghy and 6-day travel patterns are excluded. There are 25 kinds of travel plans left, followed by 2, and the details of the scheme are shown in Table \ref{tab:Symbols} \ref{tab:Symbol}
 
-\begin{table}[htbp]
+\begin{table}[H]
 	\centering
 	\caption{\label{tab:Symbols}Travel programme}
 	\begin{tabular}{c c c c c c c r }
@@ -27,7 +27,7 @@ We can calculate that for rafts and motorboats, the number of drifting days sati
 	\end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[H]
 	\centering
 	\caption{\label{tab:Symbol}Travel programme}
 	\begin{tabular}{c c c c c c r }
@@ -43,6 +43,13 @@ As shown in Table \ref{tab:Symbols} \ref{tab:Symbol},we fixed the travel options
 
 %插流程图
 \par To show our optimization model more clearly and clearly, we sketch the modeling flowchart as follows:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/flowchart}
+	\caption{The modeling flowchart}
+	\label{fig:flowchart}
+\end{figure}
+
   
 %about this eqref \eqref{aa1}
 \subsection{Optimize the use of camping sites}
@@ -183,11 +190,47 @@ First, we clarify the specific meaning of contacts in the subject, that is, whic
 	\begin{equation}
 	0 < q - p \le 5.55.\label{aa1}
 	\end{equation}
-	\par This means that for any group choosing a dinghy for transportation as their means of transport, the number of their camping sites for two consecutive night stays is less than 5, and similarly for tour groups who choose a motorboat as a means of transport, Night camping numbers differ by less than 11, both of which are part of the optimization model constraints (5-6), and we can initially determine the vehicle based on the difference between camping site numbers for two consecutive nights. Taking into account the expansion of camping matrices matrix camping matrix zeroing arbitrarily, the use of MATLAB and LINGO programming are not convenient, we use JAVA as a tool to optimize the objective model to solve, and finally get each unit camp matrix is a trip Program, \textbf{its specific content including travel time and camping sites.} According to the location of the unit camp matrix we can get each trip plan start time. In order to facilitate the narrative, we use the form Wi-j said program, for example, M-2 said travel plan 2, motorboat sailing 8 nights. Below we will give the itinerary of April 1 to April 2 based on the results of our model:
+	\par This means that for any group choosing a dinghy for transportation as their means of transport, the number of their camping sites for two consecutive night stays is less than 5, and similarly for tour groups who choose a motorboat as a means of transport, Night camping numbers differ by less than 11, both of which are part of the optimization model constraints (5-6), and we can initially determine the vehicle based on the difference between camping site numbers for two consecutive nights. Taking into account the expansion of camping matrices matrix camping matrix zeroing arbitrarily, the use of MATLAB and LINGO programming are not convenient, we use JAVA as a tool to optimize the objective model to solve, and finally get each unit camp matrix is a trip Program, \textbf{its specific content including travel time and camping sites.} According to the location of the unit camp matrix we can get each trip plan start time. In order to facilitate the narrative, we use the form Wi-j said program, for example, M-2 said travel plan 2, motorboat sailing 8 nights. Below we will give the itinerary of April 1 to April 2 based on the results of our model: Table \ref{tab:addlabel}
+	
+	\begin{table}[H]
+		\centering
+		\caption{the Tour arrangements for tourists on April 1 and 2 
+		}
+		\scalebox{0.85}[0.85]{
+			\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+				\toprule
+				\multicolumn{1}{|p{1em}|}{Date} & \multicolumn{1}{p{2em}|}{Types} & \multicolumn{17}{p{25em}|}{\centering The number of compsites} \\
+				\midrule
+				\multicolumn{1}{|r|}{\multirow{9}[18]{*}{April.1}} &  $O$-2    & 1     & 3     & 6     & 7     & 8     & 9     & 14    & 16    & 18    & 19    & 20    & 21    & 23    & 24    & 27    & 28    & 30 \\
+				\cmidrule{2-19}         & $O$-7    & 1     & 3     & 4     & 5     & 6     & 14    & 17    & 19    & 21    & 22    & 26    & 27    & 31    & 34    & 36    & 37    &  \\
+				\cmidrule{2-19}          &$O$ -5    & 3     & 6     & 7     & 8     & 9     & 10    & 11    & 15    & 16    & 18    & 19    & 20    & 21    & 22    & 25    & 32    &  \\
+				\cmidrule{2-19}          & $O$-8    & 5     & 14    & 18    & 20    & 22    & 23    & 24    & 25    & 27    & 30    & 32    & 34    & 35    &       &       &       &  \\
+				\cmidrule{2-19}          & $O$-3    & 3     & 11    & 16    & 18    & 24    & 27    & 29    & 31    & 36    &       &       &       &       &       &       &       &  \\
+				\cmidrule{2-19}          & $O$-6    & 3     & 4     & 5     & 6     & 14    & 17    & 19    & 21    & 22    & 26    & 27    & 31    & 34    & 36    & 37    &       &  \\
+				\cmidrule{2-19}          & $M$-4    & 1     & 3     & 10    & 13    & 19    & 24    & 25    & 27    & 32    & 34    & 37    &       &       &       &       &       &  \\
+				\cmidrule{2-19}          &$M$ -1    & 1     & 6     & 9     & 11    & 17    & 22    & 23    & 27    & 30    & 32    & 33    & 35    & 36    &       &       &       &  \\
+				\cmidrule{2-19}          & $M$-3    & 8     & 10    & 13    & 14    & 17    & 19    & 20    & 21    & 23    & 26    & 30    & 36    &       &       &       &       &  \\
+				\midrule
+				\multicolumn{1}{|r|}{\multirow{11}[22]{*}{April.2}} & $O$-3    & 3     & 5     & 6     & 8     & 10    & 11    & 15    & 16    & 21    & 23    & 24    & 27    & 28    & 29    & 30    &       &  \\
+				\cmidrule{2-19}          &$O$ -8    & 6     & 7     & 8     & 9     & 11    & 12    & 18    & 21    & 22    & 23    & 24    & 28    & 32    & 35    &       &       &  \\
+				\cmidrule{2-19}          & $O$-6    & 1     & 7     & 11    & 12    & 16    & 20    & 22    & 29    & 30    & 31    &       &       &       &       &       &       &  \\
+				\cmidrule{2-19}          & $O$-7    & 3     & 5     & 9     & 10    & 12    & 14    & 16    & 19    & 31    & 32    &       &       &       &       &       &       &  \\
+				\cmidrule{2-19}          &$O$ -2    & 4     & 6     & 9     & 13    & 14    & 15    & 16    & 19    & 23    & 24    & 27    & 31    & 35    & 37    &       &       &  \\
+				\cmidrule{2-19}          &$O$ -4    & 6     & 7     & 13    & 15    & 16    & 19    & 22    & 23    & 25    & 26    & 29    & 30    & 32    & 34    &       &       &  \\
+				\cmidrule{2-19}          & $O$-4    & 1     & 4     & 8     & 10    & 11    & 23    & 25    & 26    & 29    & 33    & 36    & 37    & 36    &       &       &       &  \\
+				\cmidrule{2-19}          &$M$ -8    & 10    & 13    & 16    & 19    & 21    & 22    & 25    & 27    & 31    & 32    & 33    & 34    &       &       &       &       &  \\
+				\cmidrule{2-19}          & $M$-3    & 3     & 4     & 6     & 8     & 13    & 15    & 16    & 28    & 30    & 33    & 35    & 37    &       &       &       &       &  \\
+				\cmidrule{2-19}          & $M$-7    & 2     & 7     & 12    & 16    & 21    & 22    & 25    & 30    & 31    & 32    & 35    & 36    & 37    &       &       &       &  \\
+				\cmidrule{2-19}          & $M$-2    & 4     & 5     & 8     & 9     & 11    & 12    & 13    & 15    & 16    & 17    & 18    & 19    & 20    & 26    & 32    & 35    & 36 \\
+				\bottomrule
+			\end{tabular}%
+		}
+		\label{tab:addlabel}%
+	\end{table}%
 	
 %Multiple references are introduced.：\cite{1,2,3}
 
-%\begin{figure}[htbp]
+%\begin{figure}[H]
 %	\subfigure[name of the subfigure]{      %第一张子图
 %		\begin{minipage}{7cm}
 %			\centering                   %子图居中
