@@ -1,4 +1,4 @@
-
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
 \section{Models}
 \noindent
 We consider the travel time and travel methods, a total of 26 kinds of programs are proposed, that is, two kinds of travel patterns and thirteen kinds of travel time permutations and combinations. According to our hypothesis, the maximum daily drifting tour time is 8, which is determined by inequality:
@@ -6,40 +6,34 @@ We consider the travel time and travel methods, a total of 26 kinds of programs 
 \begin{equation}
 \left\{ {\begin{array}{*{20}{c}}
 	{\frac{S}{{{v_1} \times 8}} \le {T_1}}\\
-	{\frac{S}{{{v_2} \times 8}} \le {T_2}}
+	\\
+	{\frac{S}{{{v_2} \times 8}} \le {T_2}}\\
 	\end{array}} \right. \label{aa1}
 \end{equation}
 %about this eqref \eqref{aa1}\\
 
-We can calculate that for rafts and motorboats, the number of drifting days satisfies ${T_1} \ge 7{T_2} \ge 6$ ,respectively. Therefore, we will exclude the option of including oar-raft and six-day modes of transport, leaving 25 travel options, followed by ${p_1},{p_2},{p_3}...{p_{25}}$ , The specific content of the program is shown in Table \ref{tab:OneSymbols} \ref{tab:Symbol}.
+We can calculate that for rafts and motorboats, the number of drifting days satisfies ${T_1} \ge 7{T_2} \ge 6$ ,respectively. Therefore, we will exclude the option of including oar-raft and six-day modes of transport, leaving 25 travel options, followed by ${p_1},{p_2},{p_3}...{p_{25}}$ , The specific content of the program is shown in Table \ref{tab:oneSymbols} .
 %The minimum number of drifting days for a dinghy can be calculated as 1, so the rubber dinghy and 6-day travel patterns are excluded. There are 25 kinds of travel plans left, followed by 2, and the details of the scheme are shown in Table \ref{tab:Symbols} \ref{tab:Symbol}
 
 \begin{table}[H]
 	\centering
-	\caption{\label{tab:OneSymbols}Travel programme}
+	\caption{\label{tab:oneSymbols}Travel programme}
 	\begin{tabular}{c c c c c c c r }
-		\Xhline{1.2pt}
+		\Xhline{1.6pt}
 		Travel days/days  & 6  & 7 & 8 & 9 & 10 & 11 & 12 \\
 		\midrule
 		Rubber &   & ${p_1}$ & ${p_2}$ & ${p_3}$ & ${p_4}$ & ${p_5}$ & ${p_6}$ \\
 		Motorboat &  ${p_{13}}$ & ${p_{14}}$ & ${p_{15}}$ & ${p_{16}}$ & ${p_{17}}$ & ${p_{18}}$ & ${p_{19}}$ \\
-		\Xhline{1.2pt} & 
+		\midrule
+		Travel days/days  & 13  & 14 & 15 & 16 & 17 & 18 \\
+		\midrule
+		Rubber & ${p_7}$ & ${p_7}$ & ${p_9}$ & ${p_{10}}$ & ${p_{11}}$ & ${p_{12}}$ \\
+		Motorboat &  ${p_{20}}$ & ${p_{21}}$ & ${p_{22}}$ & ${p_{23}}$ & ${p_{24}}$ & ${p_{25}}$ \\
+		\Xhline{1.6pt} & 
 	\end{tabular}
 \end{table}
 
-\begin{table}[H]
-	\centering
-	\caption{\label{tab:Symbol}Travel programme}
-	\begin{tabular}{c c c c c c r }
-	\Xhline{1.2pt}
-	Travel days/days  & 13  & 14 & 15 & 16 & 17 & 18 \\
-	\midrule
-	Rubber & ${p_7}$ & ${p_7}$ & ${p_9}$ & ${p_{10}}$ & ${p_{11}}$ & ${p_{12}}$ \\
-	Motorboat &  ${p_{20}}$ & ${p_{21}}$ & ${p_{22}}$ & ${p_{23}}$ & ${p_{24}}$ & ${p_{25}}$ \\
-	\Xhline{1.2pt} & 
-\end{tabular}
-\end{table}
-As shown in Table \ref{tab:OneSymbols} \ref{tab:Symbol},we fixed the travel options into 25 categories, that is, the river management companies have a total of 25 travel plans for tourists to choose from.
+As shown in Table \ref{tab:oneSymbols} ,we fixed the travel options into 25 categories, that is, the river management companies have a total of 25 travel plans for tourists to choose from.
 
 %插流程图
 \par To show our optimization model more clearly and clearly, we sketch the modeling flowchart as follows:
@@ -138,9 +132,9 @@ There $v = {v_1},{v_2}$ ,we let $t_j^i$ indicate that the time when the tour gro
 	\end{equation}
 	\par The above formula shows that the distance between two campsites for any two consecutive nights can not exceed the maximum daily drifting distance.
 
-\subsection{Reduce the number of contacts}
+\subsection{Reduce the number of collisionss}
 \label{subsection:5.2subsection}
-First, we clarify the specific meaning of contacts in the subject, that is, which situations can be called contacts. According to the subject, we define the same point where we reach the river at the same time as the rafting process. Second, we define the departure date matrix for the tour within 180 days. Its element $d_j^{}$ is defined as follows: 
+First, we clarify the specific meaning of collisionss in the subject, that is, which situations can be called collisionss. According to the subject, we define the same point where we reach the river at the same time as the rafting process. Second, we define the departure date matrix for the tour within 180 days. Its element $d_j^{}$ is defined as follows: 
 	\begin{equation}
 	{d_j} = J + {n_i}\label{aa1}
 	\end{equation}
@@ -154,7 +148,7 @@ First, we clarify the specific meaning of contacts in the subject, that is, whic
 		\end{array}} \right.0 < \beta {\beta ^ * } \le {n_i}\label{aa1}
 	\end{equation}
 	Where $v = {v_{1,}}{v_2}$, and $t_{ij}^{}$, $t_{ij}^ * $represents drifting the time of a tour on $j$-th day.
-	\par Defined $\lambda $ as the number of contacts, whose expression is as follows:
+	\par Defined $\lambda $ as the number of collisionss, whose expression is as follows:
 	\begin{equation}
 	\lambda  = \left\{ {\begin{array}{*{20}{c}}
 		{\lambda  +  + }&{{\rm{  \quad    (14)\; Form\ set\ up}}}\\
@@ -167,7 +161,7 @@ First, we clarify the specific meaning of contacts in the subject, that is, whic
 	\end{equation}
 	
 \subsection{Itinerary Plan}
-\noindent Below we use the \textbf{two-objective optimization model} built in Sections \ref{subsection:5.1subsection} and \ref  {subsection:5.2subsection} to find out the best travel arrangements under the premise of ensuring the most frequent use and the minimum number of contacts in the campsite, and the management can provide the tourists with our scheme select. To ease the solution, we weaken the weaker target in the dual-objective into a constraint, and by adjusting it we can relax or tighten the constraint. Finally, our mathematical model is as follows:
+\noindent Below we use the \textbf{two-objective optimization model} built in Sections \ref{subsection:5.1subsection} and \ref  {subsection:5.2subsection} to find out the best travel arrangements under the premise of ensuring the most frequent use and the minimum number of collisionss in the campsite, and the management can provide the tourists with our scheme select. To ease the solution, we weaken the weaker target in the dual-objective into a constraint, and by adjusting it we can relax or tighten the constraint. Finally, our mathematical model is as follows:
 	\begin{equation}
 	\max \sum\limits_{m = 1}^{179} {\sum\limits_{n = 1}^Y {{a_{mn}}} } \label{aa1}
 	\end{equation}
@@ -185,7 +179,7 @@ First, we clarify the specific meaning of contacts in the subject, that is, whic
 		{\lambda  \le M}
 		\end{array}} \right.\label{aa1}
 	\end{equation}
-	\par Considering that the number of campsites $Y$ is a fixed value, our model is valid for different $Y$ values. According to the literature we find that the Lees Ferry (Mile 0) to Diamond Creek (Mile 225) section of the Grand Canyon in the United States is very similar to the description of the title requirement, whereby we may wish to take the $Y$ value of 38 and the number of contacts between the tours is between Less than 10 times, that order $M{\rm{ = }}10$.
+	\par Considering that the number of campsites $Y$ is a fixed value, our model is valid for different $Y$ values. According to the literature\upcite{1} we find that the Lees Ferry (Mile 0) to Diamond Creek (Mile 225) section of the Grand Canyon in the United States is very similar to the description of the title requirement, whereby we may wish to take the $Y$ value of 38 and the number of collisionss between the tours is between Less than 10 times, that order $M{\rm{ = }}10$.
 	\par By the formula $0 < \frac{S}{{Y + 1}}(q - p) \le 8v$, when $v = {v_1}$ we can calculate:
 	\begin{equation}
 	0 < q - p \le 5.55.\label{aa1}
@@ -199,7 +193,7 @@ First, we clarify the specific meaning of contacts in the subject, that is, whic
 		\scalebox{0.85}[0.85]{
 			\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
 				\toprule
-				\multicolumn{1}{|p{1em}|}{Date} & \multicolumn{1}{p{2em}|}{Types} & \multicolumn{17}{p{25em}|}{\centering The number of compsites} \\
+				\multicolumn{1}{|p{1em}|}{Date} & \multicolumn{1}{p{2em}|}{Types} & \multicolumn{17}{p{25em}|}{\centering The number of campsites} \\
 				\midrule
 				\multicolumn{1}{|r|}{\multirow{9}[18]{*}{April.1}} &  $O$-2    & 1     & 3     & 6     & 7     & 8     & 9     & 14    & 16    & 18    & 19    & 20    & 21    & 23    & 24    & 27    & 28    & 30 \\
 				\cmidrule{2-19}         & $O$-7    & 1     & 3     & 4     & 5     & 6     & 14    & 17    & 19    & 21    & 22    & 26    & 27    & 31    & 34    & 36    & 37    &  \\
