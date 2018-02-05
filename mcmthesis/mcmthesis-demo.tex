@@ -1,11 +1,16 @@
+% =================================快捷键及注意事项================================
 %1. 注释
 %"Ctrl" + "T"
 %2. 去除注释
 %“Ctrl” + "U"
+%*************************** 用github 提交时，只提交你修改的相关文件。日志等不提交。
 \documentclass{mcmthesis}
+
+
+% =================================原始控制页模板设置=======================================
 \mcmsetup{CTeX = true,   % 使用 CTeX 套装时，设置为 true
         tcn = 6666, problem = A,
-        sheet = true, titleinsheet = true, keywordsinsheet = true,
+        sheet = false, titleinsheet = true, keywordsinsheet = true,
         titlepage = false, abstract = true}
 \usepackage{palatino}
 \usepackage{caption} % 图片
@@ -13,29 +18,33 @@
 \usepackage{lipsum} % 文本
 \usepackage{booktabs} % 表格
 \usepackage{makecell} % 表格线段的粗细
-\usepackage{cite}
 \usepackage{supertabular} % 多页表格
 \usepackage{float} % 去除图片浮动
 \usepackage[numbers,sort&compress]{natbib} % 引入多个参考文献
 \bibliographystyle{plain}
-\setlength{\parskip}{0.2em}
+\setlength{\parskip}{0.2em} %设置行距
 \usepackage{indentfirst}
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}} % 引用上标
 \setlength{\parindent}{2em}
-\title{Camping on the Grand River}
+% =================================自制控制页设置=======================================
+\newcommand{\newteamnumber}{6666} 
+\newcommand{\newproblemchosen}{B} 
+\newcommand{\ourtitle}{Camping on the Grand River} 
+% =================================自制控制页设置=======================================
+\title{Camping on the Grand River} % 标题
 \author{\small \href{http://www.latexstudio.net/}
   {\graphics[width=7cm]{mcmthesis-logo}}}
 \date{\today}
 
 \begin{document}
+% =================================正文设置=======================================
 % 摘要
-\input{paper/abstract}
-
-
+%\input{paper/abstract}
+\input{paper/ControlSheet}
 \maketitle  % 模板自带：添加
 \tableofcontents % 添加目录
-
 \newpage % 段页
-
+% =================================子文件夹设置====================================
 % 在子文件夹下编写文件
 \input{paper/Introduction}
 %\input{paper/AnalysisofOverallandKeyPoints}
