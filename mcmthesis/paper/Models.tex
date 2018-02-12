@@ -4,13 +4,14 @@
 \noindent There are two keys to be considered about the language trends: the change in the number of language speakers and their geographical distribution. The key to studying the change in the number of speakers is to build a sound predictive model. Considering the incompleteness and roughness of the statistical data about speakers, we consider the establishment of a non-equidistant gray prediction model. In considering the geographical distribution of language speakers, we study the following two aspects: the regional disparities in the distribution of the language speakers in different regions and the changes in the geographical distribution of second languages due to immigration.
 
 \subsubsection{Changes in the number of language speakers}
-\noindent For the study of the trend of global language change, we should consider two aspects, that is, the change in the total population of a certain language and the change in geographical distribution of language speakers, As explained in the Problem Analysis, when predicting trends in the population of languages, we first need to collect historical data about the particular language being used.
-\par Part of the data are listed below: 
+\noindent For the study of the trend of global language change, we should consider two aspects, that is, the change in the total population of a certain language and the change in geographical distribution of language speakers, As explained in the Problem Analysis, when predicting trends in the population of languages, we first need to collect historical data about the particular language being used.The data are listed below:
+
 
 \begin{table}[H]
 	\centering
 	\caption{Global rankings in 2014, 2015, 2016, 2017 Change in total headcount usage in the top 23 languages}
-	\begin{tabular}{llrrrr}
+		 \scalebox{0.87}[0.87]{%
+	\begin{tabular*}{35em}{@{\extracolsep{\fill}}clrrrr}
 		\toprule
 		\multicolumn{1}{l}{Number} & Language & 2014  & 2015  & 2016  & 2017 \\
 		\midrule
@@ -35,17 +36,21 @@
 		19    & Urdu  & 153.8177 & 153.5716 & 153.3494 & 153.0674 \\
 		20    & Italian & 64.94941 & 64.9459 & 64.94238 & 64.93799 \\
 		\bottomrule
-	\end{tabular}%
+	\end{tabular*}%
+}
 	\label{tab:addlabel}%
 \end{table}%
 
-\par The table above shows the changes in the total number of people speaking the top 23 languages in the world in 1999, 2009, 2014, 2015 and 2017.
-\par We analyze the data in the above table and consider the small amount of data (only four years of data), while the Gray Prediction Model has the characteristics of less input data but high prediction accuracy. And driven by reference 1111[2]1111, we establish a non-equidistant Gray Prediction Model GM (1,1) to predict the number of language speakers.Due to the non-equidistant distribution of data over time, we define non-equally spaced sequences of language speakers:
+ The table above shows the changes in the total number of people speaking the top 23 languages in the world in 1999, 2009, 2014, 2015 and 2017.
+ 
+ We analyze the data in the above table and consider the small amount of data (only four years of data), while the Gray Prediction Model has the characteristics of less input data but high prediction accuracy. And driven by reference\upcite{gm11}, we establish a non-equidistant Gray Prediction Model GM (1,1) to predict the number of language speakers.Due to the non-equidistant distribution of data over time, we define non-equally spaced sequences of language speakers:
+
+
 
 \begin{equation}
 \begin{aligned}
-{x_j}^{(0)}({k_i}) = \left\{ {{x_j}^{(0)}({k_1}),{x_j}^{(0)}({k_2}),...,{x_j}^{(0)}({k_n})} \right\} \\
-\Delta {k_i} = {k_i} - {k_{i - 1}}
+& {x_j}^{(0)}({k_i}) = \left\{ {{x_j}^{(0)}({k_1}),{x_j}^{(0)}({k_2}),...,{x_j}^{(0)}({k_n})} \right\} \\
+& \qquad \qquad \qquad \Delta {k_i} = {k_i} - {k_{i - 1}} \\
 \end{aligned}
 \end{equation}
 
@@ -55,25 +60,60 @@
 {x_j}^{(1)}{\rm{(}}{k_i}{\rm{) = }}\left\{ {{x_j}^{(1)}({k_1}),{x_j}^{(1)}({k_2}),...,{x_j}^{(1)}({k_n})} \right\}\label{aa1}
 \end{equation}
 
+Where ，  makes the following formula true 
+
+\begin{equation}
+{x_j}^{(1)}{\rm{(}}{k_i}{\rm{) = }}\sum\limits_{m = 1}^i {{x_j}^{(0)}({k_j})\Delta {k_j}{\rm{ ,  }}} i = 1,2,...,n
+\end{equation}
+
+Based on the above, the steps of using non-equidistant Gray Prediction Model\upcite{gm11} to predict the number of speaking speakers over the next 50 years are as follows:
+
+ \begin{enumerate}
+ \item[\textbf{Step1}]  Determine the interval of non-equally spaced sequences.
+ \item[\textbf{Step2}] From the formula (1) to generate a cumulative sequence.
+ \item[\textbf{Step3}] Least square method is used to determine the parameters a\&b to be identified in the albinism differential equation ,that is
+		 \begin{equation}
+		 \phi {\rm{ = }}\left[ {\widehat a\widehat b} \right] = {({B^T}B)^{ - 1}}{B^T}Y 
+		 \end{equation}
+	where, $B{\rm{ = }}\left[ {\begin{array}{*{20}{c}}
+		{{z_m}^{(1)}({k_1})}1\\
+		\vdots  \vdots \\
+		{{z_m}^{(1)}({k_n})}1
+		\end{array}} \right]$, $Y{\rm{ = }}({x_j}^{(0)}({k_2})\Delta {k_2},{x_j}^{(0)}({k_3})\Delta {k_3}, \cdots ,{x_j}^{(0)}({k_n})\Delta {k_n})$ and ${z_j}^{(1)}({k_i})$  is the background value \upcite{influential} of ${x_j}^{(1)}(t)$  on the discrete interval  $\left[ {{k_i},{k_{i + 1}}} \right]$.
+  \item[\textbf{Step4}] The estimate ${\widehat x_m}^{(0)}({k_{i + 1}})$ of ${x_m}^{(0)}({k_{i + 1}})$  is calculated\upcite{influential} from the parameters a, b.
+\end{enumerate}
+
+From the above derivation process, we use MATLAB (Programming code is shown in appendix) as a programming tool to determine the total number of the mainstream languages speakers in the next 10 years the results( Figure \ref{fig:next50}) are as shown below:
+     
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{figures/next50number}
+	\includegraphics[width=1\linewidth,height=8cm]{figures/next50number}
 	\caption{The number of speakers in major languages over the next 50 years}
-	\label{fig:next50number}
+	\label{fig:next50}
 \end{figure}
 
-\begin{figure}[h]
+After analyzing the figure above, we find that the total number of English-speaking population exceeded that of Chinese by 2045 and become the most heavily spoken language in the world.Additionally, the most powerful growth is in Spanish. In 2067, the rankings of the top ten mainstream languages in the world are:
+
+\textbf{English,Chinese Mandarin, Spanish ,Hindustani, Arabic ,Portuguese, Russian, French, German Standard, Malay.}
+
+The changes in the number of native speakers in the future areshown in the following Figure \ref{fig:percent1} :
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{figures/percent}
-	\caption{}
-	\label{fig:percent}
+	\includegraphics[width=1\linewidth,,height=8.1cm]{figures/percent}
+	\caption{The number of native speakers in major language}
+	\label{fig:percent1}
 \end{figure}
+Analyzing the figure above, we find that the number of people who speak Mandarin as their mother tongue is the largest, followed by Spanish, with the most pronounced growth trend in the language. In 2067, the top 10 languages that are speaked as the first languages are Chinese Mandarin, Spanish, English, Hindi, Portuguese, Arabic, Bengali, Russian, Japanese, German Standard.
+
+Considering the results of the analysis of the above two graphs and comparing the current two rankings provided in the topic, we can get the following table (Table \ref{tab:Language}):
+
 
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}[H]
 	\centering
 	\caption{Language ranking comparison}
-	\begin{tabular}{l p{2.8cm}p{2.8cm}p{2.8cm}p{2.8cm}}
+	\begin{tabular}{l p{2.8cm}p{2.8cm}p{2.8cm}p{3.2cm}}
 		\toprule
 		\multicolumn{1}{l}{Rank} & native speakers（2017 year） & native speakers（2067 year） & total speakers（2017 year） & total speakers（2067 year） \\
 		\midrule
@@ -89,19 +129,35 @@
 		10    & Japanese & German Standard. & French & Malay \\
 		\bottomrule
 	\end{tabular}%
-	\label{tab:addlabel}%
+	\label{tab:Language}%
 \end{table}%
 
-\subsubsection{4.1.2}
+Our analysis of top 10 languages in 2017 and 2067 shows the following results: it is true that none of the top ten languages are replaced for both native speakers and total speakers , but the exact rankings of the ten languages change. The total number of English speakers surpassed that of Chinese. In the mother tongue, Chinese still occupy the dominant position, followed by Spain to maintain the status of second place unchanged.
 
 \subsubsection{The impact of Population Migration on the Geographical}
+\noindent
+Simulating the geographical distribution of changes in the population of different languages, we consider two key factors: the change in the number of languages in the world and the immigration situation. For the former, we compare the difference in the number of the same language speakers in different regions. In that way, we obtain the transformation law of geographical distribution of the population speaking the language.And for the latter,a population-flow model is proposed to simulate immigration, which can show the change of the geographical distribution of the language caused by immigrants over time. To facilitate modeling, as described in the problem analysis, we define Asia, Europe, Africa, North America, South America, and Oceania as the six-language collective, Respectively marked as ${R_1},{R_2}, \cdots ,{R_m}$ ,where m is 6 . According to reference \upcite{gm11}, we find that more than half of the world's growing population over the next 50 years is derived from Africa. And given our time constraints, we study only in the top 20 languages in Africa (the region most likely to be the center of distribution for language speakers. Based on the results calculated from the model built in the first part of the question we chose French, Italian, Arabic, English, Portuguese as the research object.
+
+In order to facilitate the analysis of the geographical distribution of a linguistic population over time,we define language regional collective as follows:
+
+\begin{equation}
+{\gamma _i} = \frac{{L{1_i}^j}}{{\sum\limits_{i = 1}^6 {L{1_i}^j} }}
+\end{equation}
+
+${\gamma _i}$ characterizes the degree of distribution of a language in a Language Regional Collective,.The greater the value, the greater the number of speakers of that language in this region.
+
+After that, we compare the values of ${\gamma _i}$ in different regions and then we can get the geographical distribution differences of the studied languages.
+
+Apply ing the data from the first part of the modeling (see Annex 1), we can get the change of the ratio of the total speakers of French, Arabic, Italian, English and Portuguese to the total speakers in these four languages in Africa. The results are shown in the following figure.
+
+\subsubsection{Impact of Population Migration on the Geographical Distribution of Second Language}
 \noindent Based on the above questions, we can draw a conclusion that the number of second language speakers in the number of changes in the trend because the world outside the mother tongue of a second language is known geographical map, combined with Google Maps Analysis of the second language used mainly as follows:
 
 % Table generated by Excel2LaTeX from sheet 'Sheet2'
 \begin{table}[H]
 	\centering
 	\caption{ The second language is mainly used in countries / regions}
-	\begin{tabular}{l|l|p{4cm} |p{4cm}}
+	\begin{tabular}{llp{5cm}p{5cm}}
 		\toprule
 		language & Asian & Europe & Oceania \\
 		\midrule
@@ -118,27 +174,12 @@
 		Turkish &       & Austria,Germany, Bulgaria &  \\	\midrule
 		Italian &       &       &  \\
 		\bottomrule
-		\toprule
-		language & North America& South America &  Africa \\
-		\midrule
-		Chinese &       &       &  \\	\midrule
-		English & Central America & & Egypt,Sudan ,Cameroon ,Cameroon \\	\midrule
-		spanish & \multicolumn{1}{l}{America} & Brazil &  \\	\midrule
-		Arabic &       &       & Ethiopia ,Chad ,Somalia, South Sudan \\	\midrule
-		Russian &       &       &  \\	\midrule
-		Bengalese &       &       &  \\	\midrule
-		Portuguese &       &       &  \\	\midrule
-		French & America&       & Mozambique \\	\midrule
-		Hausa &       &       & the Nile ,Nigeria \\	\midrule
-		Turkish &       &       &  \\	\midrule
-		Italian &       & Argentina & Algeria \\	\midrule
-		\bottomrule
 	\end{tabular}%
 	\label{tab:addlabel}%
 \end{table}%
 
-\par According to the above table and the relevant data 1111[4]1111, we can see that as the top10 of the second language of the country, the following are arranged in order (in parentheses, the number of countries): English (55), French (14), Russian (13), Spanish , Creole (8), Arabic (8), Kurdish (4), Portuguese (4), Italian (3), Quechua (3).
-\par The changes in the geographical distribution of the second language mainly consider the impact of the population migration pattern, in which the migration pattern of the population is mainly influenced by government policy and emigration of a country. We simply think that no government intervention or intervention policy in a certain period of time remained basically unchanged, so we only consider the impact of immigration factors on the second language in the geographical distribution of change.According to the data, we choose to use the net migration to reflect the immigration factor. It is known that the United Nations predicts the net migration before 2100 1111[5]1111, and at the same time it can avoid errors in the data obtained by our own prediction model.To simplify the model, we assume that the net number of new moves in a given linguistic region is proportional to the number of new speakers using the dominant language in the region as a second language,and the definition of the newly added population that dominates the region's second language as an assimilated population.
+\par According to the above table and the relevant data \upcite{undata}, we can see that as the top10 of the second language of the country, the following are arranged in order (in parentheses, the number of countries): English (55), French (14), Russian (13), Spanish , Creole (8), Arabic (8), Kurdish (4), Portuguese (4), Italian (3), Quechua (3).
+\par The changes in the geographical distribution of the second language mainly consider the impact of the population migration pattern, in which the migration pattern of the population is mainly influenced by government policy and emigration of a country. We simply think that no government intervention or intervention policy in a certain period of time remained basically unchanged, so we only consider the impact of immigration factors on the second language in the geographical distribution of change.According to the data, we choose to use the net migration to reflect the immigration factor. It is known that the United Nations predicts the net migration before 2100 \upcite{undata}, and at the same time it can avoid errors in the data obtained by our own prediction model.To simplify the model, we assume that the net number of new moves in a given linguistic region is proportional to the number of new speakers using the dominant language in the region as a second language,and the definition of the newly added population that dominates the region's second language as an assimilated population.
 \par We can calculate the number of people who are assimilated in the language region by the number of net immigrants in a language region. As follows:
 
 \begin{equation}
@@ -146,17 +187,18 @@
 \end{equation}
 
 \noindent Among them: $P_i^j$ represents the number of net immigrants in a country's second language, $L2_i^j$ represents the number of assimilated people in a certain language region, that is, the number of second-language growers, $L{2^j}$ represents the $j$th-language growth,this value is determined by the model of the first part of the question.
-\par According to the above analysis and formula, Echarts Gallray can be used to make a dynamic map of the geographical distribution of a second language under the influence of population migration 1111[6]1111. The geographical distribution of second language speakers in each language in the above table can be displayed.Random screenshots here to get the number of speakers in English, Spanish as a second language in the geographical distribution of changes:
+\par According to the above analysis and formula, Echarts Gallray can be used to make a dynamic map of the geographical distribution of a second language under the influence of population migration \upcite{mapdata}. The geographical distribution of second language speakers in each language in the above table can be displayed.Random screenshots here to get the number of speakers in English, Spanish as a second language in the geographical distribution of changes:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{figures/english}
+	\includegraphics[width=1\linewidth,height=10cm]{figures/english}
 	\caption{Geographical distribution of English as a second language in 2067}
 	\label{fig:english}
 \end{figure}
 
-\noindent Note: The color column changes upward, representing the increase in the number of more.\\
-\par From the comparison between the above figure and the known geographical distribution in 2017, we can see that the countries currently speaking English as the second language are mainly located in four regions:Western and Central European countries (Sweden, Norway, France, Iceland, Poland), Malaysia, Central American countries, East African countries (Egypt, Sudan, Cameroon).The number of L2 speakers in English in 2017 was 611 million, rising to 1.147 billion in 2067, an increase of 536 million in the number of speakers of L2 in 50 years.Of these, countries rank the highest to the lowest in the country: 1,976,000(Sweden)> 1,226,600(Norway)> 76,000(France)> 69,000 (Iceland) > 400,000 (Costa Rica) > 100,000.
+\noindent Note: The color column changes upward, representing the increase in the number of more.
+
+ From the comparison between the above figure and the known geographical distribution in 2017, we can see that the countries currently speaking English as the second language are mainly located in four regions:Western and Central European countries (Sweden, Norway, France, Iceland, Poland), Malaysia, Central American countries, East African countries (Egypt, Sudan, Cameroon).The number of L2 speakers in English in 2017 was 611 million, rising to 1.147 billion in 2067, an increase of 536 million in the number of speakers of L2 in 50 years.Of these, countries rank the highest to the lowest in the country: 1,976,000(Sweden)> 1,226,600(Norway)> 76,000(France)> 69,000 (Iceland) > 400,000 (Costa Rica) > 100,000.
 \par Analysis of the geographical distribution of changes:
 \begin{itemize}
 	\item The growth of the three North West European countries, Switzerland, Norway and France, showed the most noticeable changes. The growth rates of these three countries were all above 700,000. In addition, some Nordic countries also saw an increase in their numbers；
@@ -166,9 +208,9 @@
 
 \par The figure below is the geographical distribution of Spanish as a second language:
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{figures/Spanish}
+	\includegraphics[width=1\linewidth,height=10cm]{figures/Spanish}
 	\caption{Geographical distribution of Spanish as a second language in 2067}
 	\label{fig:spanish}
 \end{figure}
@@ -213,7 +255,7 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{figures/chart}
+	\includegraphics[width=0.7\linewidth]{figures/chart}
 	\caption{Language Influence Index Structure chart}
 	\label{fig:chart}
 \end{figure}
@@ -262,10 +304,10 @@
 	\centering
 	\caption{2012-2013 scores of some languages and rankings}
 	 \scalebox{0.87}[0.87]{%
-	\begin{tabular}{|p{4.11em}|r|r|r|r|r|r|}
+	\begin{tabular}{p{4.11em}rrrrrr}
 		\toprule
-		\multicolumn{1}{|c|}{\multirow{2}[4]{*}{\backslashbox[0pt][l]{Language}{Time}}} & \multicolumn{2}{c}{2012} & \multicolumn{2}{c}{2013} & \multicolumn{2}{c|}{2014} \\
-		\cmidrule{2-7}    \multicolumn{1}{|c|}{} & \multicolumn{1}{p{4.11em}|}{Score} & \multicolumn{1}{p{4.11em}|}{Rank} & \multicolumn{1}{p{4.055em}|}{Score} & \multicolumn{1}{p{4.055em}|}{Rank} & \multicolumn{1}{p{4.055em}|}{Score} & \multicolumn{1}{p{4.055em}|}{Rank} \\
+		\multicolumn{1}{c}{\multirow{2}[4]{*}{\backslashbox[0pt][l]{Language}{Time}}} & \multicolumn{2}{c}{2012} & \multicolumn{2}{c}{2013} & \multicolumn{2}{c}{2014} \\
+		\cmidrule{2-7}    \multicolumn{1}{c}{} & \multicolumn{1}{p{4.11em}}{Score} & \multicolumn{1}{p{4.11em}}{Rank} & \multicolumn{1}{p{4.055em}}{Score} & \multicolumn{1}{p{4.055em}}{Rank} & \multicolumn{1}{p{4.055em}}{Score} & \multicolumn{1}{p{4.055em}}{Rank} \\
     \midrule
 	English & 0.853  & 1     & 0.853  & 1     & 0.752  & 1 \\
 	\midrule
@@ -292,7 +334,7 @@
 	\label{tab:012}%
 \end{table}%
 
-\par As can be observed in the above table, the more rankings indicate the higher the influence of the language. LII model calculates the language impact score each year the language score will be some basic changes. For example, French ranked fifth from 2012, ranking up one place in 2013 and down three places in 2014; English has been the number one language influence in these three years, with the weakest influence in Portugal.
+ As can be observed in the above table, the more rankings indicate the higher the influence of the language. LII model calculates the language impact score each year the language score will be some basic changes. For example, French ranked fifth from 2012, ranking up one place in 2013 and down three places in 2014; English has been the number one language influence in these three years, with the weakest influence in Portugal.
 
 \subsubsection{Establishment of six new international offices} 
 \noindent The key factors to consider when adding a new office are: Regional Language effectiveness. In fact, the newly added international offices are generally located in economically developed and easily accessible cities, so we have only given the preferred language zone for the office, which can be decided by the multinational company for the specific location of the new office. At the same time, pay attention to the fact that the two countries in the United States and China have set up their own offices, so no additional office will be set up.
@@ -303,9 +345,10 @@
 \begin{table}[H]
 	\centering
 	\caption{Change of language performance rankings every decade}
-	\begin{tabular}{|p{5.22em}|r|r|r|r|r|r|}
+		 \scalebox{0.87}[0.87]{%
+	\begin{tabular*}{40em}{@{\extracolsep{\fill}}ccccccc}
 		\toprule
-		\multicolumn{1}{|r|}{\backslashbox[0pt][l]{Language}{Year}} & 2017  & 2027  & 2037  & 2047  & 2057  & 2067 \\
+		\multicolumn{1}{r}{\backslashbox[0pt][l]{Language}{Year}} & 2017  & 2027  & 2037  & 2047  & 2057  & 2067 \\
 		\midrule
 		English & 1     & 1     & 1     & 1     & 1     & 1 \\
 		\midrule
@@ -327,7 +370,8 @@
 		\midrule
 		Hindi & 10    & 10    & 10    & 9     & 8     & 7 \\
 		\bottomrule
-	\end{tabular}%
+	\end{tabular*}%
+}
 	\label{tab:Change}%
 \end{table}%
 
