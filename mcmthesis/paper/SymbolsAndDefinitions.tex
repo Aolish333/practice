@@ -1,100 +1,30 @@
 \section{Symbols and Definitions }
+\noindent
 In the section, we use some symbols for constructing the model as follows: 
-
-
-
-%\begin{center}
-%\tablefirsthead{%
-%	\hline
-%	\multicolumn{1}{|c}{\tbsp Symbolr} &
-%	\multicolumn{1}{c}{Deﬁnition} & \\
-%	\hline}
-%\tablehead{%
-%	\hline
-%	\multicolumn{2}{|l|}{\small\sl continued from previous page}\\
-%	\hline
-%	\multicolumn{1}{|c}{\tbsp Symbolr} &
-%	\multicolumn{1}{c}{Deﬁnition} & \\
-%	\hline}
-%\tabletail{%
-%	\hline
-%	\multicolumn{2}{|r|}{\small\sl continued on next page}\\
-%	\hline}
-%\tablelasttail{\hline}
-%\bottomcaption{This table is split across pages}
-%\tablefirsthead{%
-%	\hline
-%	\multicolumn{1}{|c}{\tbsp Symbolr} &
-%	\multicolumn{1}{c}{Deﬁnition} & \\
-%	\hline}
-%\tablehead{%
-%	\hline
-%	\multicolumn{2}{|l|}{\small\sl continued from previous page}\\
-%	\hline
-%	\multicolumn{1}{|c}{\tbsp Symbolr} &
-%	\multicolumn{1}{c}{Deﬁnition} & \\
-%	\hline}
-%\tabletail{%
-%	\hline
-%	\multicolumn{2}{r}{\small\sl continued on next page}\\
-%	\hline}
-%\tablelasttail{\hline}
-%\bottomcaption{This table is split across pages}
-%\tablefirsthead{%
-%	\hline
-%	\multicolumn{1}{c}{\tbsp Symbolr} &
-%	\multicolumn{1}{c}{Deﬁnition} & \\
-%	\hline}
-%\tablehead{%
-%	\hline
-%	\multicolumn{2}{l}{\small\sl continued from previous page}\\
-%	\hline
-%	\multicolumn{1}{c}{\tbsp Symbolr} &
-%	\multicolumn{1}{c}{Deﬁnition} & \\
-%	\hline}
-%\tabletail{%
-%	\hline
-%	\multicolumn{2}{r}{\small\sl continued on next page}\\
-%	\hline}
-%\tablelasttail{\hline}
-%\bottomcaption{This table is split across pages}
-%\begin{supertabular}{c@{\hspace{6.5mm}}c}
-%			X &  Trips travel down the Big Long River each year during a six month period \\
-%	Y &  Camp sites on the Big Long River \\
-%	S &  The total length of the river \\
-%	${v_1}$ &  The speed of oarpowered rubber rafts \\
-%	${v_2}$ &  The speed of motorized boats \\
-%	${p_i}$ &  Travel options \\
-%	$U_i^k$ &  Unit camp matrix \\
-%	${C_i}$ &  Camping matrix \\
-%	$A$ &  Total camp camp matrix \\
-%	$J$ &  The launch date of a given tour group \\
-%	${n_i}$ &  The number of days the  th travel option lasts \\
-%	$\lambda $ &  the ith dam in a series of small dams \\
-%	\hline 
-%\end{supertabular}
-%\end{center}
+%==============================================================================
+% 在最后的排版中如果一页放不下，可以分开放。
 \begin{table}[H]
 	\begin{center}
-	\caption{\label{tab:Symbols_total}Symbols and Definitions}
-	\begin{tabular}{c p{13cm}}
-	\toprule
-		Symbol  & Deﬁnition \\
-		\midrule
-		X &  Trips travel down the Big Long River each year during a six month period \\
-		Y &  Camp sites on the Big Long River \\
-		S &  The total length of the river \\
-		${v_1}$ &  The speed of oarpowered rubber rafts \\
-		${v_2}$ &  The speed of motorized boats \\
-		${p_i}$ &  Travel options \\
-		$U_i^k$ &  Unit camp matrix \\
-		${C_i}$ &  Camping matrix \\
-		$A$ &  Total camp camp matrix \\
-		J &  The launch date of a given tour group \\
-		${n_i}$ &  The number of days the  th travel option lasts \\
-
-		$\lambda $ &  the ith dam in a series of small dams \\
-	\bottomrule
-	\end{tabular}
-\end{center}
+		\caption{\label{tab:Symbols_total}Symbols and Definitions}
+			\renewcommand\arraystretch{1.5}
+				 \scalebox{0.87}[0.87]{%
+		\begin{tabular*}{35em}{ c p{12cm}}
+			\toprule
+		 Symbol  & Deﬁnition \\
+		 \midrule
+    	${x_m}^{(0)}({k_n})$&  The total population of the m-th language using that language in year \\
+			$L{1_i}^j$	 & The number of native speakers in the language region Community  using the j-th language\\
+			${\gamma _i}$	 & The extent to which a language is localized in a language region\\
+			$P_i^j$	 & Number of net movers in a country's second language \\
+			$L2_i^j$	 & Number of assimilated people in a language zone\\
+			$m$	 &The m-th indicator \\
+			${\omega _m}$	 & The weight of each indicator\\
+			$S_m^j$	 & The m-th indicator normalized the result\\
+			${s^j}$	 & Total score of international influence in the j-th language\\
+			\bottomrule
+		\end{tabular*}
+	}
+		\renewcommand\arraystretch{1}
+	\end{center}
 \end{table}
+

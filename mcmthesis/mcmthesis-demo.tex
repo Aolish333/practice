@@ -5,11 +5,9 @@
 %“Ctrl” + "U"
 %*************************** 用github 提交时，只提交你修改的相关文件。日志等不提交。
 \documentclass{mcmthesis}
-
-
 % =================================原始控制页模板设置=======================================
 \mcmsetup{CTeX = true,   % 使用 CTeX 套装时，设置为 true
-        tcn = 6666, problem = A,
+        tcn = 89760, problem = B,
         sheet = false, titleinsheet = true, keywordsinsheet = true,
         titlepage = false, abstract = true}
 \usepackage{palatino}
@@ -21,42 +19,45 @@
 \usepackage{supertabular} % 多页表格
 \usepackage{float} % 去除图片浮动
 \usepackage[numbers,sort&compress]{natbib} % 引入多个参考文献
-\bibliographystyle{plain}
 \setlength{\parskip}{0.2em} %设置行距
 \usepackage{indentfirst}
+\usepackage{slashbox}
 \newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}} % 引用上标
 \setlength{\parindent}{2em}
+\bibliographystyle{plain}
 % =================================自制控制页设置=======================================
-\newcommand{\newteamnumber}{6666} 
+\newcommand{\newteamnumber}{89760} 
 \newcommand{\newproblemchosen}{B} 
-\newcommand{\ourtitle}{Camping on the Grand River} 
+\newcommand{\ourtitle}{The future of global languages} 
 % =================================自制控制页设置=======================================
-\title{Camping on the Grand River} % 标题
+\title{The future of global languages} % 标题
 \author{\small \href{http://www.latexstudio.net/}
   {\graphics[width=7cm]{mcmthesis-logo}}}
 \date{\today}
 
 \begin{document}
 % =================================正文设置=======================================
-% 摘要
-%\input{paper/abstract}
-\input{paper/ControlSheet}
+\input{paper/abstract} % 模板自带的摘要
+%\newgeometry{left=2.5cm,right=2.5cm}
+\input{paper/ControlSheet} % 控制页及摘要 
+\restoregeometry % 恢复原来的设置
 \maketitle  % 模板自带：添加
 \tableofcontents % 添加目录
 \newpage % 段页
 % =================================子文件夹设置====================================
 % 在子文件夹下编写文件
-\input{paper/Introduction}
-%\input{paper/AnalysisofOverallandKeyPoints}
-\input{paper/AssumptionsAndJustification}
-\input{paper/SymbolsAndDefinitions}
-\input{paper/Models}
-\input{paper/EvaluateOfTheMode}
+\input{paper/Introduction} % 介绍
+\input{paper/AnalysisofOverallandKeyPoints} % 模型的分析
+\input{paper/AssumptionsAndJustification}  % 假设
+\input{paper/SymbolsAndDefinitions} %符号设置
+\input{paper/Models} % 模型
+%\input{paper/Conclusions} % 结论
+\input{paper/EvaluateOfTheMode} % 灵敏度分析
+\input{paper/Conclusions} % 结论
 \input{paper/StrengthsAndWeaknesses}
-%\input{paper/Conclusions}
-\input{paper/FutureImprovements}
-\input{paper/memorandum}
+\input{paper/FutureImprovements} %进一步提高
+\input{paper/Memorandum} % 说明书
 \input{paper/References}
-% 附录
-\include{paper/appendices}
+\include{paper/appendices} 
+% =================================子文件夹设置====================================
 \end{document}
