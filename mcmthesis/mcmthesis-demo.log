@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2017.9.28)  6 FEB 2018 16:26
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2017.9.28)  13 FEB 2018 07:57
 entering extended mode
 **mcmthesis-demo.tex
-(I:\Days\mcmthesis\mcmthesis-demo.tex
+(I:\practice\mcmthesis\mcmthesis-demo.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-(I:\Days\mcmthesis\mcmthesis.cls
+(I:\practice\mcmthesis\mcmthesis.cls
 Document Class: mcmthesis 2017/01/01 v6.2.1 The Thesis Template Designed For MC
 M/ICM
 The Thesis Template Designed For MCM/ICM
@@ -624,25 +624,57 @@ LaTeX Info: Redefining \cite on input line 694.
 (D:\CTEX\MiKTeX\tex\latex\tools\indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-(I:\Days\mcmthesis\mcmthesis-demo.aux (I:\Days\mcmthesis\paper/appendices.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 37.
-(D:\CTEX\MiKTeX\tex\latex\psnfss\t1ppl.fd
+(D:\CTEX\MiKTeX\tex\latex\slashbox\slashbox.sty
+slashbox style by K.Yasuoka, May 1993.
+\@slashboxa=\box41
+\@slashboxb=\box42
+\@slashboxc=\box43
+\@slashboxwd=\count153
+\@slashboxht=\count154
+\@slashsepl=\dimen174
+\@slashsepr=\dimen175
+) (I:\practice\mcmthesis\mcmthesis-demo.aux
+
+LaTeX Warning: Label `tab:addlabel' multiply defined.
+
+
+LaTeX Warning: Label `aa1' multiply defined.
+
+
+LaTeX Warning: Label `aa1' multiply defined.
+
+
+LaTeX Warning: Label `aa1' multiply defined.
+
+
+LaTeX Warning: Label `aa1' multiply defined.
+
+
+LaTeX Warning: Label `tab:addlabel' multiply defined.
+
+(I:\practice\mcmthesis\paper/appendices.aux
+
+LaTeX Warning: Label `tab:addlabel' multiply defined.
+
+))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 38.
+ (D:\CTEX\MiKTeX\tex\latex\psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 Requested font "pplr8t" at 12.0pt
@@ -653,8 +685,8 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 37.
-\c@lstlisting=\count153
+(lastpage)             ! on input line 38.
+\c@lstlisting=\count155
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -689,21 +721,22 @@ Package lastpage Info: Please have a look at the pageslts package at
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring ON on input line 37.
+\AtBeginShipoutBox=\box44
+Package hyperref Info: Link coloring ON on input line 38.
 (D:\CTEX\MiKTeX\tex\latex\hyperref\nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 (D:\CTEX\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count154
+\c@section@level=\count156
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
+LaTeX Info: Redefining \nameref on input line 38.
 
-(I:\Days\mcmthesis\mcmthesis-demo.out) (I:\Days\mcmthesis\mcmthesis-demo.out)
+(I:\practice\mcmthesis\mcmthesis-demo.out)
+(I:\practice\mcmthesis\mcmthesis-demo.out)
 \@outlinefile=\write4
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -711,8 +744,8 @@ Package caption Info: subfigure package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-(I:\Days\mcmthesis\paper/abstract.tex)
-(I:\Days\mcmthesis\paper/ControlSheet.tex
+(I:\practice\mcmthesis\paper/abstract.tex)
+(I:\practice\mcmthesis\paper/ControlSheet.tex
 Requested font "cmr8" at 8.0pt
  -> cmr8
 Requested font "cmr6" at 6.0pt
@@ -810,11 +843,11 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 Requested font "pplb8t" at 24.88pt
  -> pplb8t
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 36.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 37.
 Requested font "pplb8t" at 12.0pt
  -> pplb8t
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 36.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 37.
 Requested font "pplb8t" at 17.28pt
  -> pplb8t
 Requested font "pplr8t" at 17.28pt
@@ -825,17 +858,19 @@ File: se-ascii-print.def 2010/03/01 v1.8 stringenc: Printable ASCII characters
 ) [1
 
 ]
-LaTeX Font Info:    Try loading font information for T1+phv on input line 44.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 45.
 
 (D:\CTEX\MiKTeX\tex\latex\psnfss\t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 44.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 45.
 Requested font "phvb8t" at 17.28pt
  -> phvb8t
 
-(I:\Days\mcmthesis\mcmthesis-demo.toc)
+(I:\practice\mcmthesis\mcmthesis-demo.toc
+Missing character: There is no （ in font pplr8t!
+)
 \tf@toc=\write5
 Requested font "pplr8t" at 10.95pt
  -> pplr8t
@@ -850,39 +885,157 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1
 
-] (I:\Days\mcmthesis\paper/Introduction.tex
+] (I:\practice\mcmthesis\paper/Introduction.tex
 Requested font "pplr8t" at 14.4pt
  -> pplr8t
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 2.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 3.
 Requested font "pplb8t" at 14.4pt
  -> pplb8t
-)
-(I:\Days\mcmthesis\paper/AnalysisofOverallandKeyPoints.tex)
-(I:\Days\mcmthesis\paper/AssumptionsAndJustification.tex
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 5.
+Requested font "pplr8t" at 8.0pt
+ -> pplr8t
+Requested font "cmex7" at 5.0pt
+ -> cmex7
+Requested font "msam5" at 5.0pt
+ -> msam5
+Requested font "msbm5" at 5.0pt
+ -> msbm5
+Requested font "cmbx5" at 5.0pt
+ -> cmbx5
+Requested font "cmmib5" at 5.0pt
+ -> cmmib5
+Requested font "cmbsy5" at 5.0pt
+ -> cmbsy5
+Requested font "rsfs5" at 5.0pt
+ -> rsfs5
+Requested font "lasy5" at 5.0pt
+ -> lasy5
+Requested font "pplr8t" at 6.0pt
+ -> pplr8t
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 17.
 
 (D:\CTEX\MiKTeX\tex\latex\psnfss\omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
-)
-(I:\Days\mcmthesis\paper/SymbolsAndDefinitions.tex
-Missing character: There is no 三 in font pplr8t!
-Missing character: There is no 段 in font pplr8t!
-Missing character: There is no 式 in font pplr8t!
-Missing character: There is no 顶 in font pplr8t!
-Missing character: There is no 线 in font pplr8t!
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]) (I:\practice\mcmthesis\paper/AnalysisofOverallandKeyPoints.tex)
+(I:\practice\mcmthesis\paper/AssumptionsAndJustification.tex
+Missing character: There is no ， in font pplr8t!
+
+Overfull \hbox (7.34819pt too wide) in paragraph at lines 9--10
+[]\T1/ppl/b/n/12 Suppose the pop-u-la-tion us-ing lower-ranked lan-guages will 
+not surge.\T1/ppl/m/n/12 With
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4]) (I:\practice\mcmthesis\paper/SymbolsAndDefinitions.tex
 Missing character: There is no ﬁ in font pplr8t!
-Missing character: There is no 三 in font pplr8t!
-Missing character: There is no 段 in font pplr8t!
-Missing character: There is no 式 in font pplr8t!
-Missing character: There is no 底 in font pplr8t!
-Missing character: There is no 线 in font pplr8t!
 
-Overfull \hbox (1.84666pt too wide) in paragraph at lines 8--15
- [] 
+Underfull \hbox (badness 10000) in alignment at lines 26--26
+[][] 
+ []
+
+) (I:\practice\mcmthesis\paper/Models.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
+Missing character: There is no ， in font pplr8t!
+
+Overfull \hbox (12.84555pt too wide) in paragraph at lines 69--70
+[]\T1/ppl/m/n/12 Based on the above, the step-s of us-ing non-equidistant Gray 
+Pre-dic-tion Model$[]$
+ []
+
+File: figures/next50number.png Graphic file (type QTm)
+<use  "figures/next50number.png" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7]
+Overfull \hbox (3.44794pt too wide) in paragraph at lines 101--102
+[]\T1/ppl/b/n/12 English,Chinese Man-darin, S-pan-ish ,Hin-dus-tani, Ara-bic ,P
+or-tuguese, Rus-
+ []
+
+File: figures/percent.png Graphic file (type QTm)
+<use  "figures/percent.png" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
+Missing character: There is no （ in font pplr8t!
+Missing character: There is no ） in font pplr8t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
+[]|\T1/ppl/m/n/12 native s-peak-
+ []
+
+Missing character: There is no （ in font pplr8t!
+Missing character: There is no ） in font pplr8t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
+[]|\T1/ppl/m/n/12 native s-peak-
+ []
+
+Missing character: There is no （ in font pplr8t!
+Missing character: There is no ） in font pplr8t!
+
+Underfull \hbox (badness 8170) in paragraph at lines 138--138
+[]|\T1/ppl/m/n/12 total s-peak-er-
+ []
+
+Missing character: There is no （ in font pplr8t!
+Missing character: There is no ） in font pplr8t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
+[]|\T1/ppl/m/n/12 total s-peak-er-
+ []
+
+
+Overfull \hbox (3.55861pt too wide) in paragraph at lines 138--138
+[]|\T1/ppl/m/n/12 German,Standard| 
+ []
+
+
+Underfull \hbox (badness 4181) in paragraph at lines 138--138
+[]|\T1/ppl/m/n/12 German S-tan-
  []
 
 
@@ -891,13 +1044,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2]) (I:\Days\mcmthesis\paper/Models.tex)
-(I:\Days\mcmthesis\paper/Conclusions.tex)
-(I:\Days\mcmthesis\paper/EvaluateOfTheMode.tex)
-(I:\Days\mcmthesis\paper/StrengthsAndWeaknesses.tex)
-(I:\Days\mcmthesis\paper/FutureImprovements.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
-
+[9]
+Underfull \hbox (badness 3701) in paragraph at lines 186--186
+[]|\T1/ppl/m/n/12 Ukraine, Kaza-khstan, Uzbek-
  []
 
 
@@ -906,55 +1055,224 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3]
-Overfull \hbox (2.74991pt too wide) in paragraph at lines 5--6
-[]\T1/ppl/m/n/12 In this pa-per, we es-tab-lish a tra-di-tion-al goal of two-go
-al op-ti-miza-tion, which
+[10]
+
+LaTeX Warning: Command \L invalid in math mode on input line 195.
+
+Missing character: There is no ^^8a in font cmr12!
+File: figures/english.png Graphic file (type QTm)
+<use  "figures/english.png" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
+Missing character: There is no ； in font pplr8t!
+File: figures/Spanish.png Graphic file (type QTm)
+ <use  "figures/Spanish.png" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
+Missing character: There is no （ in font pplb8t!
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00043pt
+(hyperref)                removed on input line 240.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00043pt
+(hyperref)                removed on input line 240.
+
+
+Overfull \hbox (16.4755pt too wide) in paragraph at lines 242--243
+\T1/ppl/m/n/12 spired by reference$[]$ to pro-pose the lan-guage in-flu-ence In
+-dex (LII) mod-el.Language
  []
 
-) (I:\Days\mcmthesis\paper/Memorandum.tex)
-(I:\Days\mcmthesis\paper/References.tex
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 6.
+Missing character: There is no ： in font pplb8t!
 
-(D:\CTEX\MiKTeX\tex\latex\psnfss\t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
+File: figures/chart.png Graphic file (type QTm)
+ <use  "figures/chart.png" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+Overfull \hbox (10.8591pt too wide) in paragraph at lines 352--352
+[]|\T1/ppl/m/n/12 Portuguese| 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+Overfull \hbox (4.40791pt too wide) in paragraph at lines 397--398
+\T1/ppl/m/n/12 changed.The six c-ities i-den-ti-fied by rank-ings are: \T1/ppl/
+b/n/12 Lon-don, Eng-land / Paris, France
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]) (I:\practice\mcmthesis\paper/EvaluateOfTheMode.tex
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\T1/ppl/m/n/12 Economy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\T1/ppl/m/n/12 Language
+ []
+
+
+Overfull \hbox (1.2473pt too wide) in paragraph at lines 27--27
+[]|\T1/ppl/m/n/12 Knowledge
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\T1/ppl/m/n/12 International
+ []
+
+) (I:\practice\mcmthesis\paper/Conclusions.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19]) (I:\practice\mcmthesis\paper/StrengthsAndWeaknesses.tex
+Overfull \hbox (5.8341pt too wide) in paragraph at lines 6--8
+\T1/ppl/m/n/12 To s-tudy this prob-lem, t-wo main mod-el-s are es-tab-lished: t
+he non-equidistant
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20]) (I:\practice\mcmthesis\paper/FutureImprovements.tex)
+(I:\practice\mcmthesis\paper/Memorandum.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21]) (I:\practice\mcmthesis\paper/References.tex
+Overfull \hbox (3.52528pt too wide) in paragraph at lines 15--17
+[]\T1/ppl/m/n/12 The list of lan-guages by pop-u-la-tion,https://en.wikipedia.o
+rg/wiki/The_list
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22]
+Underfull \hbox (badness 3861) in paragraph at lines 19--20
+[]\T1/ppl/m/n/12 The sec-ond lan-guage oth-er than the moth-er tongue of the co
+un-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+\T1/ppl/m/n/12 tries in the world is count-ed, http://www.mafengwo.cn/travel-
+ []
+
+Missing character: There is no ’ in font pplr8t!
 )
-Requested font "pcrr8t" at 12.0pt
- -> pcrr8t
-)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] (I:\Days\mcmthesis\paper/appendices.tex
+[23] (I:\practice\mcmthesis\paper/appendices.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
 Requested font "pplr8t" at 10.0pt
  -> pplr8t
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 10.
+(D:\CTEX\MiKTeX\tex\latex\psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
 Requested font "pcrr8t" at 10.0pt
  -> pcrr8t
-(I:\Days\mcmthesis\code\Campsite.java
+ (I:\practice\mcmthesis\code\L2.m
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 6.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 1.
 Requested font "pcrb8t" at 10.0pt
  -> pcrb8t
-
-Overfull \hbox (1.944pt too wide) in paragraph at lines 29--30
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+)
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/ppl/m/n/12 Austria,Germany,
  []
 
-))
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+[]|\T1/ppl/m/n/12 Egypt,Sudan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+\T1/ppl/m/n/12 ,Cameroon
+ []
+
+
+Underfull \hbox (badness 2980) in paragraph at lines 40--40
+[]|\T1/ppl/m/n/12 Ethiopia ,Chad ,So-
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5
+[24
 
 ]
 
@@ -963,21 +1281,33 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6] 
+[25])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26] 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
-(I:\Days\mcmthesis\mcmthesis-demo.aux (I:\Days\mcmthesis\paper/appendices.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 61.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 61.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
+(I:\practice\mcmthesis\mcmthesis-demo.aux
+(I:\practice\mcmthesis\paper/appendices.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 63.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 63.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 12905 strings out of 430478
- 173099 string characters out of 3191502
- 404618 words of memory out of 3000000
- 15761 multiletter control sequences out of 15000+200000
- 28372 words of font info for 67 fonts, out of 3000000 for 9000
+ 13506 strings out of 430478
+ 180069 string characters out of 3191502
+ 445356 words of memory out of 3000000
+ 16332 multiletter control sequences out of 15000+200000
+ 31743 words of font info for 76 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,12n,92p,872b,1189s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 53i,18n,92p,1568b,1662s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on mcmthesis-demo.pdf (7 pages).
+Output written on mcmthesis-demo.pdf (27 pages).

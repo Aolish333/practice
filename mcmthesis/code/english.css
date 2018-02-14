@@ -1,0 +1,219 @@
+var data=[
+  {
+    "time": 'English',
+    "data": [
+      {"name":"Sweden","value":[76*10000,10000.222,"Sweden"]},
+      {"name":"Norway","value":[69*10000,4234,"Norway"]},
+      {"name":"France","value":[196*10000,403,"France"]},
+      {"name":"Iceland","value":[1*10000,200,"Iceland"]},
+      {"name":"Costa Rica","value":[5*10000,30,"Costa Rica"]},
+      {"name":"Panama","value":[10*10000,30,"Panama"]},
+      {"name":"Oman","value":[40*10000,0,"Oman"]},
+      {"name":"Malaysia","value":[122.6*10000,0,"Malaysia"]},
+    ]
+  }
+ 
+]
+
+
+var option = {
+  baseOption: {
+    animationDurationUpdate: 1000,
+    animationEasingUpdate: 'quinticInOut',
+    timeline: {
+      axisType: 'category',
+      orient: 'vertical',
+      autoPlay: true,
+      inverse: true,
+      playInterval: 5000,
+      left: null,
+      right: 5,
+      top: 20,
+      bottom: 20,
+      width: 70,
+      height: null,
+      label: {
+        normal: {
+          textStyle: {
+            color: '#ddd'
+          }
+        },
+        emphasis: {
+          textStyle: {
+            color: '#fff'
+          }
+        }
+      },
+      symbol: 'none',
+      lineStyle: {
+        color: '#555'
+      },
+      checkpointStyle: {
+        color: '#bbb',
+        borderColor: '#777',
+        borderWidth: 1
+      },
+      controlStyle: {
+        showNextBtn: false,
+        showPrevBtn: false,
+        normal: {
+          color: '#666',
+          borderColor: '#666'
+        },
+        emphasis: {
+          color: '#aaa',
+          borderColor: '#aaa'
+        }
+      },
+      data: data.map(function(ele) {
+        return ele.time
+      })
+    },
+    backgroundColor: '#404a59',
+    title: {
+      text: "L2' Growth in some Countries with a Language as a Second Language",
+      subtext: 'Unit: PCS',
+      left: 'center',
+      top: 'top',
+      textStyle: {
+        fontSize: 25,
+        color: 'rgba(255,255,255, 0.9)'
+      }
+    },
+    tooltip: {
+      formatter: function(params) {
+        if ('value' in params.data) {
+          return params.data.value[2] + ': ' + params.data.value[0];
+        }
+      }
+    },
+    grid: {
+      left: '12%',
+      right: '45%',
+      top: '70%',
+      bottom: 20
+    },
+    xAxis: {},
+    yAxis: {},
+    series: [
+      {
+        id: 'map',
+        type: 'map',
+        mapType: 'world',
+        top: '10%',
+        bottom: '25%',
+        left: 10,
+        itemStyle: {
+          normal: {
+            areaColor: '#323c48',
+            borderColor: '#404a59'
+          },
+          emphasis: {
+            label: {
+              show: true
+            },
+            areaColor: 'rgba(255,255,255, 0.5)'
+          }
+        },
+        data: []
+      }, {
+        id: 'bar',
+        type: 'bar',
+        tooltip: {
+          show: false
+        },
+        label: {
+          normal: {
+            show: true,
+            position: 'right',
+            textStyle: {
+              color: '#ddd'
+            }
+          }
+        },
+        data: []
+      }, {
+        id: 'pie',
+        type: 'pie',
+        radius: ['8%', '20%'],
+        center: ['75%', '85%'],
+        roseType: 'radius',
+        tooltip: {
+          formatter: '{b} {d}%'
+        },
+        data: [],
+        label: {
+          normal: {
+            textStyle: {
+              color: '#ddd'
+            }
+          }
+        },
+        labelLine: {
+          normal: {
+            lineStyle: {
+              color: '#ddd'
+            }
+          }
+        },
+        itemStyle: {
+          normal: {
+            borderColor: 'rgba(0,0,0,0.3)',
+            borderSize: 1
+          }
+        }
+      }
+    ]
+  },
+  options: []
+}
+
+for (var i = 0; i < data.length; i++) {
+  option.options.push({
+    visualMap: [{
+      dimension: 0,
+      left: 10,
+      itemWidth: 12,
+      min: data[i].data[data.length].value[0],
+      max: data[i].data[0].value[0],
+      text: ['High', 'Low'],
+      textStyle: {
+        color: '#ddd'
+      },
+      inRange: {
+        color: ['lightskyblue', 'yellow', 'orangered', 'red']
+      }
+    }],
+    xAxis: {
+      type: 'value',
+      boundaryGap: [0, 0.1],
+      axisLabel: {
+        show: false,
+      }
+    },
+    yAxis: {
+      type: 'category',
+      axisLabel: {
+        textStyle: {
+          color: '#ddd'
+        }
+      },
+      data: data[i].data.map(function(ele) {
+        return ele.value[2]
+      }).reverse()
+    },
+    series: [
+      {
+        id: 'map',
+        data: data[i].data
+      }, {
+        id: 'bar',
+        data: data[i].data.map(function(ele) {
+          return ele.value[0]
+        }).sort(function(a, b) {
+          return a > b
+        })
+      }
+    ]
+  })
+}

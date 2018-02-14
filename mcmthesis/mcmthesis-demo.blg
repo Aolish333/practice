@@ -2,9 +2,7 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: mcmthesis-demo.aux
 The style file: plain.bst
 A level-1 auxiliary file: paper/appendices.aux
 Database file #1: books.bib
-Warning--I didn't find a database entry for "Lamport1994"
-Warning--I didn't find a database entry for "Mittelbach2004"
-Warning--I didn't find a database entry for "1"
-Warning--I didn't find a database entry for "2"
-Warning--I didn't find a database entry for "3"
-(There were 5 warnings)
+Warning--to sort, need author or key in mapdata
+Warning--empty publisher in influential
+Warning--empty year in influential
+(There were 3 warnings)

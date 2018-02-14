@@ -1,3 +1,37 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{mapdata}
+Echart.
+\newblock http://gallery.echartsjs.com/editor.html?c=xSyKKAw97l.
+\newblock February 12, 2018.
+
+\bibitem{influential}
+PhD Kai L.~Chan.
+\newblock {\em Which are the world’s most influential languages?}
+
+\bibitem{cinemaData}
+United Nations.
+\newblock Feature films and cinema data.
+\newblock http://uis.unesco.org/en\\/topic/feature-films-and-cinema-data.
+\newblock February 12, 2018.
+
+\bibitem{undata}
+United Nations.
+\newblock Lauguages of the world.
+\newblock http://data.un.org/DataMartInfo.\\aspx.
+\newblock February 12, 2018.
+
+\bibitem{wiki}
+wiki.
+\newblock List of languages by number of native speakers.
+\newblock
+  https://en.wikipedia.org/wiki/List\_of\_languages\_by\_number\_of\_native\_speakers.
+\newblock February 12, 2018.
+
+\bibitem{gm11}
+Chen Yong.
+\newblock Program implementation of gray model with non - equidistant
+  sequences.
+\newblock {\em Journal of Shangluo Teachers College}, 19(2):20--21, 2005.
 
 \end{thebibliography}
